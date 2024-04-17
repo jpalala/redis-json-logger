@@ -1,0 +1,42 @@
+{
+    "name": "jpalala/redis-json-logger",
+    "description": "A description for redis-json-logger.",
+    "type": "package",
+    "license": "MIT",
+    "keywords": [
+        "laravel"
+    ],
+    "authors": [
+        {
+            "name": "Joe Palala",
+            "email": "joe@palala.dev"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^7.0|^8.0",
+        "predis/predis": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jpalala\\RedisJsonLogger\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jpalala\\RedisJsonLogger\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jpalala\\RedisJsonLogger\\Providers\\RedisJsonLoggerServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0"
+    }
+}
